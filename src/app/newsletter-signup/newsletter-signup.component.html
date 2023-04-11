@@ -1,0 +1,29 @@
+<div class="newsletter-container">
+  <div class="content">
+    <button class="close-button" (click)="closeNewsletter()">&times;</button>
+
+    <img class="logo" src="assets/medverify-logo.png" alt="Medverify Logo" />
+    <h2>Hello from Medverify</h2>
+    <p>
+      With laws around the world changing every day, our mission is to provide up-to-date information about new laws and regulations, so you can travel safely. Sign up for our newsletter to receive important updates and alerts tailored to you as a traveler.
+    </p>
+    <form (submit)="subscribeToNewsletter()" #newsletterForm="ngForm">
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        placeholder="Enter your email"
+        required
+        class="email-input"
+      />
+      <button type="submit" [disabled]="!newsletterForm.valid" class="submit-button">
+        Subscribe
+      </button>
+    </form>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/TravelMedCheck" target="_blank" rel="noopener noreferrer"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+      <a href="https://www.twitter.com/TravelMedCheck" target="_blank" rel="noopener noreferrer"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+      <a href="https://www.linkedin.com/company/travelmedcheck" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin-icon.png" alt="LinkedIn"></a>
+    </div>
+  </div>
+</div>
