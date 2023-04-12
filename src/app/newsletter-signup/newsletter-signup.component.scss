@@ -7,6 +7,26 @@
   border-radius: 5px;
   width: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: 5s fadeIn;
+    animation-fill-mode: forwards;
+
+    visibility: hidden;
+  }
+
+  .ele:hover {
+    background-color: #123;
+  }
+
+  @keyframes fadeIn {
+    99% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+
+
+
 }
 
 .logo {
@@ -59,7 +79,7 @@ p {
 }
 
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: blue;
 }
 
 .submit-button[disabled] {
@@ -94,26 +114,4 @@ p {
   cursor: pointer;
 }
 
-@media (max-width: 767px) {
-  .newsletter-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-
-  .content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 90%;
-    width: 300px;
-  }
-}
 
