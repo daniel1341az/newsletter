@@ -1,7 +1,6 @@
-<div class="newsletter-container">
+<div class="newsletter-container" *ngIf="showNewsletterBox">
   <div class="content">
     <button class="close-button" (click)="closeNewsletter()">&times;</button>
-
     <img class="logo" src="assets/medverify-logo.png" alt="Medverify Logo" />
     <h2>Hello from Medverify</h2>
     <p>
